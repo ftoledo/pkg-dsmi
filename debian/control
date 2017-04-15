@@ -1,0 +1,23 @@
+Source: dsmidiwifi
+Section: sound
+Priority: optional
+Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
+Build-Depends: debhelper (>= 9), libasound2-dev, libqt4-dev
+Standards-Version: 3.9.8
+Homepage: https://github.com/SBRK/dsmi
+Vcs-Git: https://github.com/ftoledo/pkg-dsmi.git
+Vcs-Browser: https://github.com/ftoledo/pkg-dsmi
+
+Package: dsmidiwifi
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+Description: Nintendo DS MIDI WiFi Server
+ This application is used to forward MIDI messages between  local MIDI 
+ applications and Nintendo DS handhelds in the local network. 
+ .  
+ For more information, visit http://dsmi.tobw.net
+ . 
+ Also, many Android / iPhone apps use this protocol to connect
+ remote midi mixers o controllers. This "procotol" is also known as "dsmi"
+ .
+ You can us apps like Dj Control (author Borce Trajkovsky) and mixxx
