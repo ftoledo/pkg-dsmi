@@ -16,6 +16,6 @@ override_dh_auto_configure:
 
 override_dh_auto_build:
 	$(MAKE) -C linux/
-	cd linux; mv DSMIDIWifi dsmidiwifi
+	cd linux; mv DSMIDIWiFi dsmidiwifi
 
 

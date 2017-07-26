@@ -1,0 +1,12 @@
+--- dsmi-master.orig/linux/DSMIDIWiFi.pro	2013-08-01 19:28:11.000000000 -0300
++++ dsmi-master/linux/DSMIDIWiFi.pro	2017-04-15 19:40:17.553059769 -0300
+@@ -13,3 +13,9 @@ QT += network
+ HEADERS += midi2udpthread.h settings.h udp2midithread.h wifimidiwindow.h
+ SOURCES += dswifimidi.cpp midi2udpthread.cpp qrc_logo.cpp udp2midithread.cpp wifimidiwindow.cpp
+ RESOURCES += images.qrc
++
++# Hardening for debian package
++QMAKE_CPPFLAGS *= $(shell dpkg-buildflags --get CPPFLAGS)
++QMAKE_CFLAGS   *= $(shell dpkg-buildflags --get CFLAGS)
++QMAKE_CXXFLAGS *= $(shell dpkg-buildflags --get CXXFLAGS)
++QMAKE_LFLAGS   *= $(shell dpkg-buildflags --get LDFLAGS)
